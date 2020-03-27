@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tipser-elements-adjustments.css">
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navigation">
+            <a class="te-logo" href="https://www.tipser.com/">
+                <img src='https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png' alt="Tipser" />
+            </a>
+            <ul class="horizontal-menu">
+                <li class="horizontal-item">
+                    <a class="link" href="https://tipser.github.io/docs/#tipser-elements" target="_blank"
+                        rel="noopener noreferrer">
+                        Documentation
+                    </a>
+                </li>
+                <li class="horizontal-item">
+                    <a class="link" href="https://github.com/Tipser/tipser-widget-bootstrap" target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub repo
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- This is the element where we want to put Tipser cart icon (referred to with CSS selector in mountCart function) -->
+    <div id="cart"></div>
+
+    <div class="content-root"></div>
+
+    <h2 class="heading">Product</h2>
+    <!-- This is a marker element for tipser product, given tipser product id -->
+    <div data-tipser-pid="5c6ff65d75afb80001816edc"></div>
+
+    <h2 class="heading">Product compact</h2>
+    <!-- This is a marker element for tipser product with compact mode enabled, given tipser product id -->
+    <div data-tipser-pid="59083a8f60689325d8727ad9" data-tipser-view="compact"></div>
+
+    <h2 class='heading'>Collection</h2>
+    <!-- This is a marker element for tipser Collection, given tipser collection id -->
+    <p data-tipser-cid="5cf51fec561f17000129fcb7" data-tipser-imgsize="1"><a href="https://www.tipser.com:443/shops/tipser/shoes"></a>SHOES</a> </p>
+
+    <h2 class="heading">Collection (1 element)</h2>
+    <div data-tipser-cid="5cf524488643910001afc41a"></div>
+
+    <h2 class="heading">Store</h2>
+    <!-- This is a marker element for tipser shop -->
+    <div id="tipser_shop"></div>
+
+    <script>
+        var scriptTag = document.createElement('script');
+        scriptTag.src = "https://cdn.tipser.com/tipser-script/latest.js";
+        // in case you want to load local dev version of script
+        // scriptTag.src = "http://127.0.0.1:8080/Script-tipser-elements.js";
+
+        scriptTag.onload = scriptTag.onreadystatechange = function () {
+            tipser.elements('59e86b79b8f3f60a94ecd26a', { //pos id (Tipser user id)
+                //The configuration of tipser widget comes here
+                env: "prod",
+                lang: "en-US",
+                eventsHandlers: {
+                    onError: function (error) {
+                        console.error(error)
+                    },
+                    onAddToCart: function (options) {
+                        console.log('Hurray, you have added item to cart. ', options.product);
+                        console.log('Your cart size is now. ', options.cartSize);
+                    }
+                }
+            })
+
+                .mountCart('#cart') //inserting Tipser cart to the HTML
+        };
+        document.body.appendChild(scriptTag);
+    </script>
+
+    <div class="footer-terms">
+        <div class="footer-logo"><a href="/" class="tipser-logo">
+                <img src="https://www.tipser.com/523e894dc43c43f278bb4211a4430285.png" alt="">
+            </a>
+        </div>
+        <div class="footer-links "><a href="https://www.tipser.com/terms" target="_blank" class="footer-link">Conditions
+                of Use and Sale</a><a href="https://www.tipser.com/terms-privacy" target="_blank"
+                class="footer-link">Privacy notice</a><a href="https://www.tipser.com/imprint" target="_blank"
+                class="footer-link">Imprint</a><a href="https://www.tipser.com/terms-cookies" target="_blank"
+                class="footer-link">Cookies &amp;
+                Analytics</a></div>
+        <div class="footer-copyrights">© 2011 - 2019, Tipser AB</div>
+    </div>
+
+</body>
+
+</html>

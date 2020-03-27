@@ -1,27 +1,20 @@
-This is an example project showing how to use Tipser Elements components library in a React project.
 
-[See this page live!](https://tipser.github.io/tipser-elements-react-bootstrap/)
+# tipser-widget-bootstrap
 
-Check the [Tipser Elements Documentation](https://tipser.github.io/docs/#tipser-elements) for reference.
+## See it live!
+
+https://tipser.github.io/tipser-widget-bootstrap/
 
 ## Running locally
 
-In the project directory, you can run:
-
+1. From command line
 ```
-npm install
-npm start
+npm install -g http-server
+http-server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Go to http://localhost:8080 from your browser
 
-The page will reload if you make edits.<br>
+## Deployment
 
-## Publishing to GitHub Pages
-
-In the project directory, you can run:
-
-```
-npm run build
-npm run deploy
-```
+To deploy changes simply push changes to `origin/master` git branch. GitHub Pages will use files from it if `gh-pages` branch does not exist.   
