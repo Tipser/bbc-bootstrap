@@ -78,17 +78,12 @@
          </code>
     </pre>
 
+    <script src="https://cdn.tipser.com/tipser-script/latest.js"></script>
     <script>
-        var scriptTag = document.createElement('script');
-        scriptTag.src = "https://cdn.tipser.com/tipser-script/dev.js";
-
-        scriptTag.onload = scriptTag.onreadystatechange = function () {
-            tipser.elements('59e86b79b8f3f60a94ecd26a', { //pos id (Tipser user id)
-                env: "prod",
-                lang: "en-US",
-            })
-        };
-        document.body.appendChild(scriptTag);
+        var TIPSER_POS_ID = "59e86b79b8f3f60a94ecd26a";
+        tipser.elements(TIPSER_POS_ID, {
+            lang: "en-US"
+        })
     </script>
 
     <div class="footer-terms">
