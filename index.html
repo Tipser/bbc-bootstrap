@@ -38,15 +38,15 @@
 
     <h2 class="heading">Banner embedded in an iframe element</h2>
 
-    <div>
-        <iframe frameBorder="0" height="650" width="400" srcdoc="<img src=&quot;https://bbc-bootstrap.netlify.com/public/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')&quot; style=&quot;cursor:pointer;&quot;></img>">
+    <div class="centered-section">
+        <iframe frameBorder="0" height="650" width="400" srcdoc="<img src=&quot;https://bbc-bootstrap.netlify.com/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')&quot; style=&quot;cursor:pointer;&quot;></img>">
         </iframe>
     </div>
 
     <div>The code of the iframe above:</div>
     <code>
          <pre>
-             &lt;img src=&quot;https://bbc-bootstrap.netlify.com/public/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')&quot; style=&quot;cursor:pointer;&quot;&gt;&lt;/img&gt;
+             &lt;img src=&quot;https://bbc-bootstrap.netlify.com/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')&quot; style=&quot;cursor:pointer;&quot;&gt;&lt;/img&gt;
          </pre>
     </code>
 
@@ -57,15 +57,17 @@
 
     <h2 class="heading">Banner as a part of the article</h2>
 
-    <img src="https://bbc-bootstrap.netlify.com/public/banner.png"
-         onClick="window.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')"
-         style="cursor:pointer;">
-    </img>
+    <div class="centered-section">
+        <img src="https://bbc-bootstrap.netlify.com/public/banner.png"
+             onClick="window.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')"
+             style="cursor:pointer;">
+        </img>
+    </div>
 
     <div>The code of the image above:</div>
     <code>
          <pre>
-             &lt;img src=&quot;https://bbc-bootstrap.netlify.com/public/banner.png&quot;
+             &lt;img src=&quot;https://bbc-bootstrap.netlify.com/banner.png&quot;
          onClick=&quot;window.postMessage({command: 'tipser.api.displayProduct', productId: '5dd7df75c3d1fe0001350bda'}, '*')&quot;
          style=&quot;cursor:pointer;&quot;&gt;
     &lt;/img&gt;

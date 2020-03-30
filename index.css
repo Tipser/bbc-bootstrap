@@ -12,3 +12,8 @@ body {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+.centered-section {
+    display: flex;
+    justify-content: center;
+}
+
