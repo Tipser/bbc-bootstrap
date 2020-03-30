@@ -37,15 +37,14 @@
     </header>
 
     <div>
-        <iframe srcdoc="<button onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5b8806b55537462e00d29727'}, '*')&quot;>Banner open product button</button>">
-
+        <iframe frameBorder="0" height="650" width="400" srcdoc="<img src=&quot;https://bbc-bootstrap.netlify.com/public/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5b8806b55537462e00d29727'}, '*')&quot; style=&quot;cursor:pointer;&quot;></img>">
         </iframe>
     </div>
 
     <div>The code of the iframe above:</div>
     <code>
          <pre>
-             &lt;button onClick="window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5b8806b55537462e00d29727'}, '*')"&gt;Banner open product button&lt;/button&gt;
+             &lt;img src=&quot;https://bbc-bootstrap.netlify.com/public/banner.png&quot; onClick=&quot;window.top.postMessage({command: 'tipser.api.displayProduct', productId: '5b8806b55537462e00d29727'}, '*')&quot; style=&quot;cursor:pointer;&quot;&gt;&lt;/img&gt;
          </pre>
     </code>
 
